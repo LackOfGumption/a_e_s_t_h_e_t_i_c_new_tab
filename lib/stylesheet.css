@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css?family=Nova+Mono");
+ :root {
+    --blur: 10px;
+    --font: Nova Mono, monospace;
+    --color1: #e07;
+    --color2: #111;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+.full {
+    width: 100%;
+    height: 100%;
+    font-family: var(--font);
+}
+
+html {
+    background-color: var(--color2);
+}
+
+q {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    z-index: 10;
+    color: var(--color2);
+    background: var(--color1);
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    padding: 0;
+    z-index: 10;
+}
+
+ ::selection,
+ ::-ms-selection,
+ ::-moz-selection,
+ ::-o-selection,
+ ::-webkit-selection {
+    color: var(--color2);
+    background: var(--color1);
+}
+
+q:selection,
+q:-ms-selection,
+q:-moz-selection,
+q:-o-selection,
+q:-webkit-selection {
+    color: var(--color1);
+    background: var(--color2);
+}
+
+:link,
+:visited,
+:active {
+    color: var(--color2);
+    font-style: normal;
+    text-decoration: none;
+}
+
+#time {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -150%);
+    z-index: 10;
+    font-size: 75px;
+    color: var(--color1);
+}
+
+#foreground-image {
+    size: contain;
+    max-width: 100vw;
+    max-height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 50px -20px var(--color2);
+}
+
+#background-image {
+    position: absolute;
+    z-index: -1;
+    display: block;
+    background-size: contain;
+    width: 100vw;
+    height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(var(--blur));
+    -ms-filter: blur(var(--blur));
+    -moz-filter: blur(var(--blur));
+    -o-filter: blur(var(--blur));
+    -webkit-filter: blur(var(--blur));
+}
+
+#twitter,
+#github {
+    flex: 1;
+}
+
+#github {
+    text-align: right;
+}
+
+.share {
+    font-size: 30px;
+    color: var(--color1);
+    display: inline-block;
+    padding: .2em .6em;
+    text-decoration: none;
+}
+
+.share:hover {
+    background: var(--color1);
+    color: var(--color2);
+}
